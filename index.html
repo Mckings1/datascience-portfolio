@@ -369,13 +369,30 @@
         </div>
 
         <!-- Certifications Section -->
-        <h4 class="text-lg font-medium mb-4 text-center">Certifications</h4>
+        <!-- <h4 class="text-lg font-medium mb-4 text-center">Certifications</h4>
         <div class="flex flex-wrap justify-center gap-4">
           <img src="DatViz.jpg" alt="Data Visualization Certificate" class="w-40 rounded shadow-md">
           <img src="IBM DataScience Cousera.jpg" alt="IBM Data Science Certificate" class="w-40 rounded shadow-md">
           <img src="BA.jpg" alt="Business Analytics Certificate" class="w-40 rounded shadow-md">
           <img src="Predictive Biz.jpg" alt="Predictive Analytics Certificate" class="w-40 rounded shadow-md">
+        </div> -->
+        <!-- Certification Thumbnails -->
+        <div class="flex flex-wrap justify-center gap-4">
+          <img src="DatViz.jpg" alt="Data Viz" class="w-40 rounded shadow-md cursor-pointer" onclick="openModal(this)">
+          <img src="IBM DataScience Cousera.jpg" alt="IBM DS" class="w-40 rounded shadow-md cursor-pointer"
+            onclick="openModal(this)">
+          <img src="BA.jpg" alt="Business Analytics" class="w-40 rounded shadow-md cursor-pointer"
+            onclick="openModal(this)">
+          <img src="Predictive Biz.jpg" alt="Predictive" class="w-40 rounded shadow-md cursor-pointer"
+            onclick="openModal(this)">
         </div>
+
+        <!-- Modal -->
+        <div id="imgModal" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center hidden z-50"
+          onclick="closeModal()">
+          <img id="modalImg" src="" alt="Full view" class="max-w-full max-h-full rounded shadow-lg">
+        </div>
+
       </div>
 
     </div>
@@ -676,6 +693,15 @@
       });
     });
 
+    //certificate responds
+    function openModal(img) {
+      document.getElementById('modalImg').src = img.src;
+      document.getElementById('imgModal').classList.remove('hidden');
+    }
+
+    function closeModal() {
+      document.getElementById('imgModal').classList.add('hidden');
+    }
     // Animate skill bars on scroll
     const skillBars = document.querySelectorAll('.skill-progress');
 
