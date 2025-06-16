@@ -172,7 +172,8 @@
         <div class="md:w-2/3 md:pl-12">
           <h3 class="text-2xl font-semibold mb-4">Who am I?</h3>
           <p class="text-gray-600 mb-6 leading-relaxed">
-            I'm Oluwasegun, an aspiring Data Scientist with 0–1 year hands-on experience, certified by IBM in Data
+            I'm Oluwasegun, an aspiring Data Scientist with <span class="font-bold" id="experience"></span> hands-on
+            experience, certified by IBM in Data
             Science and proficient in Python, SQL, R, and
             Excel. Detail-oriented, analytical, and
             eager to contribute to data-driven decision-making in real-world environments..
@@ -405,7 +406,36 @@
         <!-- Project 1 -->
         <div class="project-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
           <div class="relative h-48 overflow-hidden">
-            <img src="Thumbnail.PNG" alt="Project 1"
+            <img src="IBM datacapstone.gif" alt="Project 1"
+              class="w-full h-full object-cover transition duration-500 hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+            <div class="absolute bottom-4 left-4">
+              <span class="bg-blue-500 text-white text-xs font-medium px-2.5 py-0.5 rounded">Python</span>
+              <span class="bg-purple-500 text-white text-xs font-medium px-2.5 py-0.5 rounded ml-2">Jupyter</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">IBM Data Science Captsone</h3>
+            <p class="text-gray-600 mb-4">Analyzed SpaceX launch data to
+              uncover trends and predict launch success. Applied data wrangling, EDA, interactive visualizations, and
+              machine learning to identify key factors influencing successful launches.
+            </p>
+
+            <div class="flex justify-between items-center">
+              <a href="https://github.com/Mckings1/applied-dataScience-capstone.git"
+                class="text-blue-500 hover:text-blue-700 font-medium">View Project</a>
+              <a href="https://github.com/Mckings1/applied-dataScience-capstone.git"
+                class="text-gray-500 hover:text-gray-700">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
+          <div class="relative h-48 overflow-hidden">
+            <img src="Thumbnail.PNG" alt="Project 2"
               class="w-full h-full object-cover transition duration-500 hover:scale-110">
             <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
             <div class="absolute bottom-4 left-4">
@@ -428,10 +458,10 @@
           </div>
         </div>
 
-        <!-- Project 2 -->
+        <!-- Project 3 -->
         <div class="project-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
           <div class="relative h-48 overflow-hidden">
-            <img src="Thumbnail3.PNG" alt="Project 2"
+            <img src="Thumbnail3.PNG" alt="Project 3"
               class="w-full h-full object-cover transition duration-500 hover:scale-110">
             <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
             <div class="absolute bottom-4 left-4">
@@ -455,10 +485,10 @@
           </div>
         </div>
 
-        <!-- Project 3 -->
+        <!-- Project 4 -->
         <div class="project-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
           <div class="relative h-48 overflow-hidden">
-            <img src="Thumbnail4.PNG" alt="Project 3"
+            <img src="Thumbnail4.PNG" alt="Project 4"
               class="w-full h-full object-cover transition duration-500 hover:scale-110">
             <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
             <div class="absolute bottom-4 left-4">
@@ -645,6 +675,11 @@
     document.getElementById('current-date').textContent = today;
     document.getElementById('current-year').textContent = new Date().getFullYear();
 
+    ///YOE
+    const startYear = 2024;
+    const currentYear = new Date().getFullYear();
+    const experience = currentYear - startYear;
+    document.getElementById("experience").innerText = `${experience}+ years`;
 
     // Mobile menu toggle
     const menuBtn = document.getElementById('menu-btn');
